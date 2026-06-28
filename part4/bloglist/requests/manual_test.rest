@@ -1,0 +1,46 @@
+### Create a new user
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+  "username": "hellas",
+  "name": "Arto Hellas",
+  "password": "mypassword"
+}
+
+### Login and get token
+# @name login
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+  "username": "hellas",
+  "password": "mypassword"
+}
+
+### Get all blogs
+GET http://localhost:3003/api/blogs
+
+### Create a new blog (Paste token from login response after "Bearer ")
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: Bearer <paste_token_here>
+
+{
+  "title": "React patterns",
+  "author": "Michael Chan",
+  "url": "https://reactpatterns.com/",
+  "likes": 7
+}
+
+### Update a blog (Replace :id with actual ID)
+PUT http://localhost:3003/api/blogs/:id
+Content-Type: application/json
+
+{
+  "likes": 20
+}
+
+### Delete a blog (Replace :id with actual ID, requires token)
+DELETE http://localhost:3003/api/blogs/:id
+Authorization: Bearer <paste_token_here>

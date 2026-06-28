@@ -1,0 +1,169 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  min-width: 500px;
+}
+
+.search-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input {
+  padding: 0.6em;
+  border-radius: 8px;
+  border: 1px solid #646cff;
+  background-color: #1a1a1a;
+  color: white;
+  font-size: 1rem;
+  transition: border-color 0.25s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #535bf2;
+  box-shadow: 0 0 0 4px rgba(83, 91, 242, 0.1);
+}
+
+.message {
+  color: #888;
+  font-style: italic;
+}
+
+.country-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.country-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background: #2a2a2a;
+  border-radius: 6px;
+  transition: transform 0.1s;
+}
+
+.country-item:hover {
+  transform: translateX(4px);
+  background: #333;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.4em 1em;
+  font-size: 0.9em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+.country-detail {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.info-grid {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.languages-section {
+  margin: 1.5rem 0;
+}
+
+.languages-section ul {
+  padding-left: 1.5rem;
+  color: #bbb;
+}
+
+.flag-img {
+  width: 200px;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.weather-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #333;
+}
+
+.weather-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.1;
+  margin-bottom: 0.5em;
+  color: #646cff;
+}
+
+h2 {
+  color: #535bf2;
+}
+
+h3 {
+  color: #eee;
+  margin-bottom: 0.5rem;
+}
